@@ -1,6 +1,6 @@
 {
-  "name": "web-team-project-template",
-  "private": true,
+  "name": "Reality Shift by Team2",
+  "private": false,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
