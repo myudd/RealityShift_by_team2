@@ -6,6 +6,7 @@
 */
 /* Common styles */
 @import url('./common.css');
+@import url('./resets.css');
 
 /* Sections style */
 @import url('./header.css');
