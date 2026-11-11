@@ -1,0 +1,96 @@
+.section-headline-price{
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+.price-underhedline{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+}
+
+.price-card-headline{
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.actual-price{
+    font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 40px;
+}
+.price-proposition-text{
+    font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color:#FFFFFF ;
+
+}
+
+.sturt-game-buton{
+    font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        color: #FFFFFF;
+        background-color: #6A08E0;
+        border-bottom: 4px solid #5406B3;
+        border-left: 1.50px solid #5406B3;
+        border-right: 1.50px solid #5406B3;
+        border-top: 1.50px solid #5406B3;
+        border-radius: 12px;
+        padding: 10px 24px;
+        width: 303px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+.price{
+    background-color: #1F0243;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.price-card{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 16px;
+        width: 100%;
+        background: #2A0359;
+   
+}
+
+
+.price-proposition-list{
+    margin-bottom: 32px;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+
+}
