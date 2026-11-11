@@ -19,3 +19,6 @@
 @import url('./gallery.css');
 @import url('./feedbacks.css');
 @import url('./footer.css');
+
+/* Mobile menu as addition block */
+@import url('./mobile-menu.css');
