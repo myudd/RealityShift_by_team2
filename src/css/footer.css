@@ -86,9 +86,19 @@ margin: 0;
 padding: 0;
 }
 
-.footer-icon{
+.footer-icon-link {
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.footer-icon {
 display: block;
-fill:#fff;
+width: 33px;
+height: 33px;
+fill: #fff;
 }
 
 
@@ -204,6 +214,15 @@ text-align: left;
 .footer-bottom{
 width: 100%;
 }
+.footer-icon-link {
+width: 24px;
+height: 24px;
+}
+
+.footer-icon {
+ width: 20px;
+height: 20px;
+}
 
 /*==============ПІДСВІТКА===========*/
 .footer{
@@ -234,5 +253,23 @@ gap: 16px;
 .footer-nav-link{
 font-size: 18px;
 }
-    
+.footer-copy{
+font-size: 16px;
+}
+.footer-contacts-title,
+.footer-contacts-link {
+font-size: 16px;
+}
+
+.footer-icon {
+width: 20px;
+height: 20px;
+}
+
+.footer-copy {
+font-size: 16px;
+} 
+.footer-icon-link{
+    padding: 2px;
+}
 }
