@@ -1,6 +1,16 @@
 /* =========================================
    MOBILE (до 767px)
    ========================================= */
+/*======ФУТЕР+ПІДСВІТКА===========*/
+
+   .footer{
+font-family: (--font-family);
+background-color: #1f0243;
+background-image: url(/*вставити сюди свг підсвітку*/);
+background-repeat: no-repeat;
+background-position: center center;
+}
+
 .footer-container{
 display: flex;
 flex-direction: column;
@@ -77,15 +87,15 @@ padding: 0;
 }
 
 .footer-icon{
-    display: block;
-    fill:#fff;
+display: block;
+fill:#fff;
 }
 
 
 /*=============ПОСИЛАННЯ============*/
 .footer-nav{
-    width: 100%;
-    margin-top: 64px;
+width: 100%;
+margin-top: 64px;
 }
 
 .footer-nav-list{
@@ -127,20 +137,13 @@ color: #fff;
 }
 
 
-/*==========ПІДСВІТКА===========*/
-.footer{
-background-color: #1f0243;
-background-image: url(/*вставити сюди свг підсвітку*/);
-background-repeat: no-repeat;
-background-position: center center;
-}
 
 /* =========================================
    TABLET (від 768px)
    ========================================= */
 
 
-   @media screen and (min-width: 768px) {
+ @media screen and (min-width: 768px) {
 
 .footer-container{
 padding: 48px 32px;
@@ -156,24 +159,24 @@ align-items: flex-start;
 
 /*============ЛІВА КОЛОНКА============*/
 .footer-info{
-    align-items: flex-start;
-    gap: 32px;
+align-items: flex-start;
+gap: 32px;
 }
 .footer-contacts,
 .footer-contacts-group{
-    align-items: flex-start;
+align-items: flex-start;
 }
 .footer-contacts-title,
 .footer-contacts-link{
-    text-align: left;
+text-align: left;
 }
 .icon-list{
-    justify-content: flex-start;
+justify-content: flex-start;
 }
 
 .footer-nav-list{
-    align-items: flex-start;
-    gap: 24px;
+align-items: flex-start;
+gap: 24px;
 }
 
 
@@ -187,7 +190,7 @@ align-items: flex-start;
 text-align: left;
 }
 .icon-list{
-    justify-content: flex-start;
+justify-content: flex-start;
 }
 
 .footer-nav{
@@ -195,16 +198,41 @@ width: auto;
 margin-top: 0;
 }
 .footer-nav-list{
-    align-items: flex-start;
-    text-align: left;
+align-items: flex-start;
+text-align: left;
 }
 .footer-bottom{
-    width: 100%;
+width: 100%;
 }
 
 /*==============ПІДСВІТКА===========*/
 .footer{
-    background-image: url(вставити сюди свг підсвітки);
+background-image: url(вставити сюди свг підсвітки);
 background-position: center bottom;
 }
    }
+
+/*====================================
+DESKTOP(від 1440px)
+======================================*/
+@media screen and (min-width: 1440px) {
+.footer{
+background-image: url(вставити еліпс);
+background-position: center bottom;
+}
+.footer-container{
+padding: 80px 64px;
+max-width: 1440px;
+margin: 0 auto;
+}
+.footer-top{
+gap: 64px;
+}
+.footer-nav-list{
+gap: 16px;
+}
+.footer-nav-link{
+font-size: 18px;
+}
+    
+}
