@@ -1,0 +1,233 @@
+.reserve-section {
+  background-image: url('../img/reserve/reserve-bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: center calc(50% + 50px);
+}
+
+.reserve-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.reserve-title {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.reserve-subtitle {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  font-family: var(--font-family);
+}
+
+.reserve-description {
+  margin-bottom: 24px;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  color: #fff;
+}
+
+.reserve-field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  color: #fff;
+}
+
+.reserve-form-field-wrapper {
+  margin-bottom: 24px;
+}
+
+.reserve-form-field {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: border 250ms ease-in;
+}
+
+.reserve-form-field::placeholder {
+  font-family: var(--font-family);
+  transition: color 250ms ease-in;
+}
+
+.reserve-form-error-text {
+  display: none;
+  font-family: var(--font-family);
+  font-size: 12px;
+  line-height: 1.5;
+  color: #ec4c4c;
+}
+
+.reserve-form-field:hover::placeholder,
+.reserve-form-field:focus::placeholder {
+  color: #fff;
+}
+
+.reserve-form-field:invalid:not(:focus):not(:placeholder-shown)
+  ~ .reserve-form-error-text {
+  display: block;
+}
+
+.reserve-form-field:invalid:not(:focus):not(:placeholder-shown) {
+  border: 1px solid #ec4c4c;
+}
+
+.reserve-form-field:focus:not(:placeholder-shown) {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reserve-form-field:hover,
+.reserve-form-field:focus {
+  border: 1px solid #fff;
+  outline: 0;
+}
+
+.reserve-form-field:focus {
+  outline: 0;
+}
+
+.reserve-plan-wrapper {
+  margin: 0 0 24px;
+  padding: 0;
+  border: none;
+}
+
+.reserve-plan-list-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.reserve-radio-label {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  align-items: center;
+  line-height: 1.5;
+  font-family: 'Mulish', sans-serif;
+  color: #fff;
+}
+
+.reserve-custom-radio-btn {
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}
+
+.reserve-radio-label:hover .reserve-custom-radio-btn,
+.reserve-radio-label:focus-within .reserve-custom-radio-btn {
+  border-color: #9652e9;
+}
+
+.reserve-radio-label:hover,
+.reserve-radio-label:focus-within {
+  color: #9652e9;
+}
+
+.reserve-radio-btn {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.reserve-radio-btn:focus-visible ~ .reserve-custom-radio-btn {
+  outline: 1px solid #fff;
+}
+
+.reserve-radio-btn:checked ~ .reserve-custom-radio-btn {
+  border: 5.6px solid #fff;
+  width: 19px;
+  height: 19px;
+  background-color: #5406b3;
+}
+
+.reserve-form-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 4px solid #5406b3;
+  border-left: 1.5px solid #5406b3;
+  border-right: 1.5px solid #5406b3;
+  border-top: 1.5px solid #5406b3;
+  border-radius: 12px;
+  padding: 10px 24px;
+  min-width: 335px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  color: #fff;
+  background-color: #6a08e0;
+}
+
+.reserve-form-submit-btn:hover,
+.reserve-form-submit-btn:focus {
+  background-color: #5406b3;
+  border: 1px solid #5406b3;
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .reserve-form-submit-btn {
+    min-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .reserve-section {
+    background-image: url('../img/reserve/reserve-bg-tablet.svg');
+    background-position: center calc(50% + 220px);
+  }
+
+  .reserve-container {
+    flex-direction: row;
+    column-gap: 24px;
+    justify-content: space-between;
+  }
+
+  .reserve-content-wrapper,
+  .reserve-form {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .reserve-form-submit-btn {
+    min-width: 249px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .reserve-section {
+    background-image: url('../img/reserve/reserve-bg-desktop.svg');
+    background-position: calc(50% + 557px) calc(50% + 180px);
+  }
+
+  .reserve-container {
+    column-gap: 32px;
+  }
+
+  .reserve-container .reserve-description {
+    font-size: 20px;
+  }
+
+  .reserve-form-submit-btn {
+    min-width: 173px;
+    height: 47px;
+  }
+
+  .reserve-field-label {
+    font-size: 18px;
+  }
+}
