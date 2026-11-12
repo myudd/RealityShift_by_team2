@@ -1,96 +1,175 @@
-.section-headline-price{
-    font-family: var(--second-family);
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 100%;
-    letter-spacing: -0.01em;
-    text-align: center;
-    color: #FFFFFF;
+.price {
+    background-color: #1F0243;
+}
+
+.price-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section-headline-price {
     margin-bottom: 24px;
 }
 
-.price-underhedline{
+.price-underhedline {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 32px;
 }
 
-.price-card-headline{
+.price-card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    background-color: #2A0359;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: background-color 250ms ease;
+}
+
+.price-card-headline {
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 18px;
-    line-height: 110%;
+    line-height: 1.1;
     letter-spacing: -0.01em;
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 8px;
 }
 
-.actual-price{
+.actual-price {
     font-family: var(--second-family);
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 100%;
-        letter-spacing: -0.01em;
-        text-align: center;
-        color: #FFFFFF;
-        margin-bottom: 40px;
-}
-.price-proposition-text{
-    font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        color:#FFFFFF ;
-
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
 }
 
-.sturt-game-buton{
+.price-proposition-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.price-proposition {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.price-proposition-text {
     font-family: var(--font-family);
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 150%;
-        color: #FFFFFF;
-        background-color: #6A08E0;
-        border-bottom: 4px solid #5406B3;
-        border-left: 1.50px solid #5406B3;
-        border-right: 1.50px solid #5406B3;
-        border-top: 1.50px solid #5406B3;
-        border-radius: 12px;
-        padding: 10px 24px;
-        width: 303px;
-        height: 44px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-.price{
-    background-color: #1F0243;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+
+.icon-check {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.sturt-game-buton {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    background-color: #6A08E0;
+
+    border: 1.5px solid #5406B3;
+    border-bottom: 4px solid #5406B3;
+    border-radius: 12px;
+
+    padding: 10px 24px;
+    width: 100%;
+    max-width: 303px;
+    min-height: 44px;
+    box-sizing: border-box;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-top: auto;
+    align-self: center;
+
+    transition:
+        background-color 250ms ease,
+        border-color 250ms ease;
 }
 
-
-.price-card{
-    border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        padding: 16px;
-        width: 100%;
-        background: #2A0359;
-   
+.sturt-game-buton:hover,
+.sturt-game-buton:focus {
+    background-color: #5406B3;
+    border-color: #2A0359;
 }
 
+/* TABLET */
 
-.price-proposition-list{
-    margin-bottom: 32px;
-    display: flex;
-        flex-direction: column;
-        align-items: center;
+@media screen and (min-width: 768px) {
+    .price-card-list {
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 24px;
+    }
+
+    .price-card {
+        width: calc((100% - 24px) / 2);
+        box-sizing: border-box;
+    }
+    .actual-price{
+        font-size: 48px;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1440px) {
+    .price-card-list {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .price-card {
+        width: calc((100% - 24px * 3) / 4);
+        box-sizing: border-box;
+    }
+
+    .price-underhedline {
+        font-size: 20px;
+    }
+    .price-card-headline{
+        font-size: 26px;
+    }
+    
+    .actual-price{
+        font-size: 64px;
+    }
+
+    .price-proposition-text{
+        font-size: 18px;
+    }
+
+    .sturt-game-buton{
+        font-size: 18px;
+    }
 
 }
