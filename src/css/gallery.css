@@ -47,9 +47,6 @@
     box-shadow: 1px 1px 50px -1px rgba(225, 205, 248, .5);
     transform: scale(102%);
 }
-.gallery-headline {
-    font-size: 32px;
-}
 .gallery-text{
     display: flex;
     flex-direction: column;
