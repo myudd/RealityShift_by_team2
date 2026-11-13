@@ -1,0 +1,104 @@
+<section class="section reserve-section" id="reserve">
+  <div class="container reserve-container">
+    <div class="reserve-content-wrapper">
+      <h3 class="reserve-subtitle">Забронювати</h3>
+      <h2 class="section-headline reserve-title">Забронюйте сеанс</h2>
+      <p class="reserve-description">Заповніть форму, щоб забронювати сеанс.</p>
+    </div>
+    <form class="reserve-form">
+      <label class="reserve-field-label" for="name">
+        Ім'я<sup class="reserve-asterisk">*</sup>
+      </label>
+      <div class="reserve-form-field-wrapper">
+        <input
+          class="reserve-form-field"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Андрій"
+          minlength="5"
+          maxlength="64"
+          required
+        />
+        <div class="reserve-form-error-text">
+          Ім'я має містити від 5 до 64 символів
+        </div>
+      </div>
+      <label class="reserve-field-label" for="email">
+        Електронна пошта<sup class="reserve-asterisk">*</sup>
+      </label>
+      <div class="reserve-form-field-wrapper">
+        <input
+          class="reserve-form-field"
+          type="email"
+          id="email"
+          name="email"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          placeholder="hello@realityshift.com"
+          required
+        />
+        <div class="reserve-form-error-text">
+          Введіть коректну електронну адресу (наприклад, hello@realityshift.com)
+        </div>
+      </div>
+
+      <fieldset class="reserve-plan-wrapper">
+        <legend class="reserve-field-label">
+          Пакет<sup class="reserve-asterisk">*</sup>
+        </legend>
+        <ul class="reserve-plan-list">
+          <li class="reserve-plan-list-item">
+            <label class="reserve-radio-label">
+              <input
+                class="reserve-radio-btn"
+                type="radio"
+                name="plan"
+                value="start"
+                required
+                checked
+              />
+              <span class="reserve-custom-radio-btn"></span>
+              Старт
+            </label>
+          </li>
+          <li class="reserve-plan-list-item">
+            <label class="reserve-radio-label">
+              <input
+                class="reserve-radio-btn"
+                type="radio"
+                name="plan"
+                value="standard"
+              />
+              <span class="reserve-custom-radio-btn"></span>
+              Стандарт
+            </label>
+          </li>
+          <li class="reserve-plan-list-item">
+            <label class="reserve-radio-label">
+              <input
+                class="reserve-radio-btn"
+                type="radio"
+                name="plan"
+                value="premium"
+              />
+              <span class="reserve-custom-radio-btn"></span>
+              Преміум
+            </label>
+          </li>
+          <li class="reserve-plan-list-item">
+            <label class="reserve-radio-label">
+              <input
+                class="reserve-radio-btn"
+                type="radio"
+                name="plan"
+                value="company"
+              />
+              <span class="reserve-custom-radio-btn"></span>Компанія
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <button class="reserve-form-submit-btn" type="submit">Забронювати</button>
+    </form>
+  </div>
+</section>
