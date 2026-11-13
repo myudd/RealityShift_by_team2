@@ -31,7 +31,11 @@ body{
 }
 @media screen and (min-width: 768px){
     .container{
-        padding: 0 62px;
+        @media screen and (min-width: 768px) {
+                .container {
+                    padding: 0 62px;
+                    width: 704px;
+                }
         width: 704px;
     }
     .section-headline{
@@ -54,4 +58,5 @@ body{
     .container {
         width: 1312px;
     }
+}
 }

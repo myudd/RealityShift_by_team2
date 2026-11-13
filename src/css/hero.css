@@ -1,0 +1,276 @@
+/* ===== Hero: mobile (375px) =====
+   Точно (панель Inspect): padding 0 20px 64px, 375x731, flex,
+   align-items: flex-end, justify-content: center, gap: 0.
+   Остальное подтверждено Figma. Остаётся уточнить: планшет, десктоп, подключение шрифтов. */
+
+.hero {
+    box-sizing: border-box;
+    /* в resets.css нет глобального box-sizing; в Figma высота 731px включает padding */
+    display: flex;
+    /*flex-direction: row;/*является значением по умолчанию. Поэтому можно упростить*/
+    align-items: flex-end;
+    justify-content: center;
+
+    min-height: 731px;/*Это хороший выбор,
+        если высота Hero должна быть не меньше 731px,
+        но может увеличиваться при большом содержимом. Если по Figma требуется строго фиксированная высота 731px,
+            то это уже другое требование.*/
+    
+    padding: 0 0 64px;
+    /* Figma: 0 20px 64px; боковые 20px даёт .container из common.css */
+    overflow: hidden;
+    /* Figma: Clip content включён */
+
+    /* Figma: сверху градиент, под ним фото */
+    /*Если этого не сделать,
+        более старые браузеры останутся не только без картинки,
+        но и без темного градиента*/
+    background-image:
+        linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%),
+        url("../img/hero/hero-bg.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Figma: режим Fill. Позицию для брейкпоинтов уточнить по макетам */
+    background-size: cover;
+    /* mobile: в Figma режим Fill (подтверждено), без цветокоррекции. Планшет/десктоп: проверить, ТЗ говорит про фикс. ширину */
+}
+
+/* Фолбэк retina для JPG (браузеры без поддержки image-set с type()) */
+@media (min-resolution: 2dppx) {
+    .hero {
+        background-image:
+            linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%),
+            url("../img/hero/hero-bg2x.jpg");
+    }
+}
+
+/* AVIF + retina; JPG внутри image-set на случай, если AVIF не поддерживается */
+/*НАДО проверить реальный результат без самих файлов изображений и браузерного тестирования, ВОЗМОЖНО нельзя.*/
+@supports (background-image: image-set(url("a.avif") type("image/avif") 1x)) {
+    .hero {
+        background-image:
+            linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%),
+            image-set(url("../img/hero/avif/hero-bg.avif") type("image/avif") 1x,
+                url("../img/hero/avif/hero-bg2x.avif") type("image/avif") 2x,
+                url("../img/hero/webp/hero-bg.webp") type("image/webp") 1x,
+                url("../img/hero/webp/hero-bg2x.webp") type("image/webp") 2x,
+                url("../img/hero/hero-bg.jpg") type("image/jpeg") 1x,
+                url("../img/hero/hero-bg2x.jpg") type("image/jpeg") 2x);
+    }
+}
+
+/* .hero__container: отдельных стилей нет, ширину и боковые отступы задаёт .container (common.css) */
+
+.hero__title {
+    margin: 0 0 24px;
+    /* подтверждено: gap 24px в Content */
+    font-family: var(--second-font-family, "Sora", sans-serif);
+    /* Figma: Sora; переменная из common.css */
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    /* Figma: 100% (= 36px) */
+    letter-spacing: -0.01em;
+    /* Figma: -1% */
+    color: var(--color-white, #fff);
+    /* Figma: Color/White = #FFFFFF */
+}
+
+.hero__subtitle {
+    margin: 0 0 32px;
+    /* подтверждено: gap 32px между Content и Actions в Figma */
+    font-family: var(--font-family, "Open Sans", sans-serif);
+    /* Figma: Open Sans; переменная из common.css */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    /* Figma: 150% (= 24px) */
+    color: var(--color-white, #fff);
+    /* Figma: Color/White = #FFFFFF */
+}
+
+.hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* подтверждено: Actions, Figma */
+}
+
+/* Кнопки: скорее всего это общий компонент, тогда перенести в main.css */
+.btn {
+    box-sizing: border-box;
+    /* иначе width: 100% + padding + border выходят за контейнер */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* Figma */
+    width: 100%;
+    padding: 10px 24px;
+    /* Figma */
+    border-radius: 12px;
+    /* Figma */
+    font-family: var(--font-family, "Open Sans", sans-serif);
+    /* Figma: Open Sans */
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    /* Figma: 150% (= 24px) */
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-white, #fff);
+    /* Figma: Color/White = #FFFFFF */
+    cursor: pointer;
+    
+    /*рекомендую добавить ДОПОЛНЕНИЯ*/
+    transition:
+            background-color 250ms ease,
+            border-color 250ms ease;
+}
+
+.btn--primary {
+    background-color: var(--color-electric-violet, #6a08e0);
+    /* Figma: Color/Electric Violet */
+    /* Figma: обводка Color/Electric Violet Dark, сверху/слева/справа 1.5px, снизу 4px.
+     Имя --color-electric-violet-dark подтверждено панелью Inspect */
+    border: 1.5px solid var(--color-electric-violet-dark, #5406b3);
+    border-bottom-width: 4px;
+}
+
+.btn--secondary {
+    background-color: transparent;
+    /* Figma (вариант Secondary, Small=False, Normal): заливки нет, обводка Opacity/White 20
+     снаружи, сверху/слева/справа 1.5px, снизу 4px.
+     Значение подтверждено панелью Variables: White 20 = #FFFFFF, 20% */
+    border: 1.5px solid var(--opacity-white-20, rgba(255, 255, 255, 0.2));
+    /* White 20 = #FFFFFF, 20% */
+    border-bottom-width: 4px;
+}
+
+/* Состояния по UI Kit (подтверждены панелью Inspect в Figma).
+   Disabled в Hero не используется. */
+
+/* Hover / Focused: primary темнее (подтверждено по Figma) */
+.btn--primary:hover,
+.btn--primary:focus-visible {
+    /* Figma (Primary, Hover): заливка Color/Electric Violet Dark,
+     обводка Color/Electric Violet Darker, толщина та же (1.5px, снизу 4px).
+     Имена переменных подтверждены панелью Inspect */
+    background-color: var(--color-electric-violet-dark, #5406b3);
+    border-color: var(--color-electric-violet-darker, #2a0359);
+}
+
+         /* Hover / Focused у secondary: в Figma совпадает с Normal (подтверждено:
+        заливки нет, обводка та же Opacity/White 20), отдельного правила не нужно */
+/*При навигации клавиатурой пользователь должен видеть,
+какая ссылка сейчас находится в фокусе.*/
+
+/*РЕКОМЕНДУЮ ДОСТУПНОСТЬ ФОКУСА*/
+.btn--secondary:focus-visible {
+    outline: 2px solid var(--color-white, #fff);
+    outline-offset: 4px;
+}/*Это не меняет обычный дизайн кнопки,
+но делает клавиатурную навигацию заметнее.*/
+
+
+
+/* Active (Figma: Primary, Clicked, подтверждено): заливка Color/Electric Violet Dark,
+   обводки нет. Ширина border остаётся, чтобы кнопка не меняла размер,
+   но не рисуется (transparent + background-clip) */
+.btn--primary:active {
+    background-color: var(--color-electric-violet-dark, #5406b3);
+    border-color: transparent;/*делает границу прозрачной.*/
+    background-clip: padding-box;/*ограничивает отрисовку фона внутренней областью элемента,
+        не включая границу.*/
+}
+
+/* Active (Figma: Secondary, Clicked, подтверждено): ни заливки, ни обводки, остаётся только белый текст.
+   Ширина border сохраняется, чтобы размер кнопки не менялся */
+.btn--secondary:active {
+    border-color: transparent;
+}
+
+/* ===== Hero: tablet (768px) =====
+   Figma (Inspect, «Головна • Tablet», слой Header): 768x450, flex, align-items: center,
+   justify-content: center, gap: 0, padding 0 32px, Clip content.
+   Container 704 (Fill), Column gap 32, Content gap 24, Actions row gap 24, W 519.
+   Не подтверждено: конец градиента и заливка Image (Fill/Crop, позиция) для tablet. */
+@media (min-width: 768px) {
+    .hero {
+        align-items: center;
+        /* Figma: center (на mobile было flex-end) */
+        min-height: 450px;/**/
+        /* Figma: H 450 */
+        padding: 0;
+        /* Figma: 0 32px; боковые 32px (768 − 704) должен давать .container, проверить по common.css */
+    }
+
+    .hero__title {
+        font-size: 48px;/*Увеличение заголовка до 48px*/
+        /* Figma: Sora Bold 48, line-height 100% (48px), letter-spacing -1% */
+    }
+
+    .hero__subtitle {
+        max-width: 594px;/*Использование max-width для ограничения ширины текста.*/
+        /* Figma: W 594 (фиксированная ширина) */
+    }
+
+    .hero__actions {
+        flex-direction: row;
+        /* Figma: Actions row, gap 24 */
+        width: 519px;
+        /* Figma: W 519 */
+    }
+
+    .hero__actions .btn {
+        flex: 1;/*Одинаковая ширина двух кнопок благодаря flex: 1.*/
+        /* Figma: обе кнопки Fill, по 247.5px */
+    }
+}
+
+/* ===== Hero: desktop (1440px) =====
+   Figma (Inspect, «Головна • Desktop», слой Header): 1440x900, flex, align-items: center,
+   justify-content: center, gap: 0, padding 0 64px, Clip content.
+   Container 1312 (Fill), Column W 835 gap 32, Content gap 24, Actions row gap 16 (Hug).
+   Не подтверждено: конец градиента и заливка Image (Fill/Crop, позиция) для desktop. */
+@media (min-width: 1440px) {
+    .hero {
+        min-height: 900px;
+        /* Figma: H 900 */
+        padding: 0;
+        /* Figma: 0 64px; боковые 64px должен давать .container (1312 по центру), проверить по common.css */
+    }
+
+    .hero__content {
+        width: 835px;/*фиксированная ширина. При ширине экрана от 1440px это может быть нормально,
+            если контейнер обеспечивает необходимое пространство.*/
+        /* Figma: Column W 835 (фиксированная ширина) */
+    }
+
+    .hero__title {
+        font-size: 64px;
+        /* Figma: Sora Bold 64 (Heading/H1), line-height 100% (64px), letter-spacing -1% */
+    }
+
+    .hero__subtitle {
+        font-size: 20px;
+        /* Figma: Open Sans 400, 20px, line-height 150% (30px); W 594 остаётся с tablet */
+    }
+
+    .hero__actions {
+        width: fit-content;/*корректно,
+            если ширина кнопок должна зависеть от содержимого.*/
+        /* Figma: Actions W Hug (454) */
+        gap: 16px;
+        /* Figma: gap 16 */
+    }
+
+    .hero__actions .btn {
+        flex: none;
+        /* Figma: кнопки Hug: 230 и 208 */
+        width: auto;
+        font-size: 18px;
+        /* Figma: Open Sans SemiBold 18, line-height 150% (27px) */
+    }
+}
