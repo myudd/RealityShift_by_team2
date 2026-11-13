@@ -2,22 +2,23 @@
     --font-family: "Open Sans", sans-serif;
     --second-font-family: "Sora", sans-serif;
     --third-font-family: "Mulish", sans-serif;
-
+    --color-white: #fff;
 }
 body{
     background: #1f0243;
+    color: var(--color-white);
 }
 .container{
     margin: 0 auto;
     padding: 0 20px;
-    width: 335px;
+    width: 375px;
 }
 .section{
     padding: 64px 0;
 }
 .section-headline{
     font-weight: 700;
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1;
     letter-spacing: -0.01em;
     text-align: center;
@@ -31,21 +32,17 @@ body{
 }
 @media screen and (min-width: 768px){
     .container{
-        @media screen and (min-width: 768px) {
-                .container {
-                    padding: 0 62px;
-                    width: 704px;
-                }
-        width: 704px;
+        padding: 0 32px;
+        width: 768px;
     }
     .section-headline{
         font-size: 44px;
     }
 }
-@media screen and (min-width: 1200px){
-    .container{
-        padding: 0 62px;
-        width: calc(100% - 122px);
+@media screen and (min-width: 1440px) {
+    .container {
+        padding: 0 64px;
+        width: 1440px;
     }
     .section{
         padding: 112px 0;
@@ -53,10 +50,4 @@ body{
     .section-headline{
         font-size: 54px;
     }
-}
-@media screen and (min-width: 1440px) {
-    .container {
-        width: 1312px;
-    }
-}
 }
