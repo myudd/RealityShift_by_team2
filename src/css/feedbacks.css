@@ -1,0 +1,99 @@
+.reviews-items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center; 
+    gap: 16px 0;
+}
+.review-item-card{
+    border-radius: 8px;
+    width: 335px;
+    background: #2a0359;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    position: relative;
+    gap: 24px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 250ms linear;
+    flex-grow: 1;
+}
+.star-icon{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #fff;
+    stroke: none;
+}
+.star-icon.is-empty{
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 1px;
+}
+.review-text, .reviewed-by{
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.5; 
+}
+.review-text{
+    font-weight: 400;
+}
+.reviewed-by{
+    font-weight: 600;
+    margin-top: auto;
+}
+.reviews-description{
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: var(--font-family);
+    margin:24px 0 32px 0;
+}
+.review-stars{
+    display: flex;
+    gap: 0 4px;
+}
+@media screen and (min-width: 320px) and (max-width:374px) {
+    .review-item-card{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .reviews-items{
+        gap: 24px;
+    }
+    .review-item-card{
+        width: 340px;
+    }
+    
+}
+@media screen and (min-width: 1440px) {
+    .reviews-items{
+        gap: 32px;
+    }
+    .review-item-card{
+        width: 640px;
+        transition: transform 250ms linear, background-position 150ms linear;
+    }
+    .review-text{
+        font-size: 20px;
+    }
+    .reviewed-by{
+        font-size: 18px;
+    }
+    .reviews-description{
+        margin-bottom: 80px;
+        font-size: 20px; 
+    }
+    .review-item-card:hover{
+        transform: scale(102%);
+        background-image: url(../img/feedbacks/ellipse-bg.svg);
+        background-position: var(--bg-x, 50%) var(--bg-y, 50%);;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
