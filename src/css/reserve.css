@@ -39,6 +39,11 @@
   color: #fff;
 }
 
+.reserve-asterisk {
+  top: 0;
+  font-size: 100%;
+}
+
 .reserve-form-field-wrapper {
   margin-bottom: 24px;
 }
