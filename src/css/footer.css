@@ -6,7 +6,7 @@
    .footer{
 font-family: (--font-family);
 background-color: #1f0243;
-background-image: url(/*вставити сюди свг підсвітку*/);
+background-image: url("../img/footer-ellipse-mobile.svg");
 background-repeat: no-repeat;
 background-position: center center;
 }
@@ -149,6 +149,29 @@ line-height: 1.5;
 color: #fff;
 }
 
+/*==========ЕФЕКТИ (UI Kit)===========*/
+.footer-contacts-link,
+.footer-nav-link,
+.footer-icon-link {
+cursor: pointer;
+transition: opacity 250ms ease;
+}
+
+.footer-contacts-link:hover,
+.footer-contacts-link:focus,
+.footer-nav-link:hover,
+.footer-nav-link:focus,
+.footer-icon-link:hover,
+.footer-icon-link:focus {
+opacity: 0.5;
+}
+
+.footer-contacts-link:active,
+.footer-nav-link:active,
+.footer-icon-link:active {
+opacity: 0.8;
+}
+
 
 
 /* =========================================
@@ -230,7 +253,7 @@ height: 20px;
 
 /*==============ПІДСВІТКА===========*/
 .footer{
-background-image: url(вставити сюди свг підсвітки);
+background-image: url("../img/footer-ellipse-tablet.svg");
 background-position: center bottom;
 }
    }
@@ -240,7 +263,7 @@ DESKTOP(від 1440px)
 ======================================*/
 @media screen and (min-width: 1440px) {
 .footer{
-background-image: url(вставити еліпс);
+background-image: url("../img/footer-ellipse-desktop.svg");
 background-position: center bottom;
 }
 .footer-container{
