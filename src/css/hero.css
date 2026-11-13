@@ -1,8 +1,6 @@
 /* ===== Hero: mobile (375px) =====
-   Точно (панель Inspect): padding 0 20px 64px, 375x731, flex,
-   align-items: flex-end, justify-content: center, gap: 0.
-   Остальное подтверждено Figma. Остаётся уточнить: планшет, десктоп, подключение шрифтов. */
-
+   Точно (панель Inspect): padding 0 20px 64px, 375x731*/
+   
 .hero {
     box-sizing: border-box;
     /* в resets.css нет глобального box-sizing; в Figma высота 731px включает padding */
@@ -16,8 +14,8 @@
         но может увеличиваться при большом содержимом. Если по Figma требуется строго фиксированная высота 731px,
             то это уже другое требование.*/
     
-    padding: 0 0 64px;
-    /* Figma: 0 20px 64px; боковые 20px даёт .container из common.css */
+    padding: 0 20px 64px;
+    /* Figma: 0 20px 64px; */
     overflow: hidden;
     /* Figma: Clip content включён */
 
@@ -238,8 +236,8 @@
     .hero {
         min-height: 900px;
         /* Figma: H 900 */
-        padding: 0;
-        /* Figma: 0 64px; боковые 64px должен давать .container (1312 по центру), проверить по common.css */
+        max-width: 1440px;/*должен ли фон ограничиваться шириной 1440 px на больших экранах.*/
+        margin: 0 auto;
     }
 
     .hero__content {
