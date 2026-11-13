@@ -20,8 +20,6 @@
     flex-grow: 1;
 }
 .star-icon{
-    width: 20px;
-    height: 18.89px;
     padding: 0;
     margin: 0;
     display: flex;
@@ -29,6 +27,11 @@
     justify-content: center;
     fill: #fff;
     stroke: none;
+}
+.star-icon.is-empty{
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 1px;
 }
 .review-text, .reviewed-by{
     font-family: var(--font-family);
@@ -92,9 +95,5 @@
         background-position: var(--bg-x, 50%) var(--bg-y, 50%);;
         background-size: cover;
         background-repeat: no-repeat;
-    }
-    .review-item-card:hover::after{
-        background-position: 50% -5%;
-        opacity: 1;
     }
 }
