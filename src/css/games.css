@@ -52,6 +52,11 @@
   line-height: 1.5;
   color: #fff;
 }
+@media screen and (max-width: 374px) {
+  .card {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 768px) {
   .games-about-title {
     text-align: left;
