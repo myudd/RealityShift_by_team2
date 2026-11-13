@@ -173,12 +173,18 @@
   font-family: var(--font-family);
   color: #fff;
   background-color: #6a08e0;
+  transition:
+    background-color 250ms linear,
+    border 250ms linear;
 }
 
 .reserve-form-submit-btn:hover,
 .reserve-form-submit-btn:focus {
   background-color: #5406b3;
-  border: 1px solid #5406b3;
+  border-bottom: 4px solid #2a0359;
+  border-left: 1.5px solid #2a0359;
+  border-right: 1.5px solid #2a0359;
+  border-top: 1.5px solid #2a0359;
 }
 
 @media (min-width: 320px) and (max-width: 375px) {
