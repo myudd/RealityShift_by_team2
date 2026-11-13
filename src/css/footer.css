@@ -4,7 +4,7 @@ background-color: #1f0243;
 background-image: url("../img/footer-ellipse-mobile.svg");
 background-repeat: no-repeat;
 background-position: center center;
-background-size: contain;
+background-size: cover;
 }
 
 .footer-container {
