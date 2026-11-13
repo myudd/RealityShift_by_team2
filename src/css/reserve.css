@@ -173,6 +173,9 @@
   font-family: var(--font-family);
   color: #fff;
   background-color: #6a08e0;
+  transition:
+    background-color 250ms linear,
+    border 250ms linear;
 }
 
 .reserve-form-submit-btn:hover,
