@@ -1,0 +1,1 @@
+const modules = import.meta.glob('./scripts/*.js', { eager: true });
