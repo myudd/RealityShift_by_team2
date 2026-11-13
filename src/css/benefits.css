@@ -89,7 +89,7 @@
   .benefits-section {
     background-image: url(../img/Ellipse-benefits.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: calc(50% + 496px) center;
   }
   .benefits-text {
     margin-bottom: 80px;
