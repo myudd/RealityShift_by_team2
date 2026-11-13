@@ -5,12 +5,7 @@
   gap: 16px;
 }
 .games-about-title {
-  font-family: var(--second-font-family);
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
-  letter-spacing: -0.01em;
-  color: #fff;
+  text-align: left;
 }
 .games-about-text {
   font-family: var(--font-family);
@@ -27,6 +22,7 @@
 .games-card {
   display: flex;
   flex-direction: column;
+  width: 335px;
 }
 .games-img {
   border-radius: 8px 8px 0 0;
@@ -36,7 +32,7 @@
 }
 .games-card-content {
   flex-grow: 1;
-  padding: 16px;
+  padding: 16px 16px 27px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-top: 0px;
   border-radius: 0 0 8px 8px;
@@ -57,6 +53,9 @@
   color: #fff;
 }
 @media screen and (min-width: 768px) {
+  .games-about-title {
+    text-align: left;
+  }
   .games-list {
     flex-wrap: wrap;
     flex-direction: row;
@@ -65,12 +64,6 @@
   .games-card {
     width: calc(50% - 12px);
   }
-  .games-about-title {
-    font-size: 44px;
-  }
-  .games-card-content {
-    min-height: 86px;
-  }
 }
 @media screen and (min-width: 1440px) {
   .games-about {
@@ -78,12 +71,11 @@
     gap: 32px;
   }
   .games-about-title {
-    font-size: 54px;
-    flex: 0 0 40%;
+    text-align: left;
+    min-width: 527px;
   }
   .games-about-text {
     font-size: 20px;
-    flex: 1;
   }
   .games-list {
     flex-wrap: wrap;
@@ -94,6 +86,9 @@
   .games-card {
     width: calc((100% - 128px) / 5);
   }
+  .games-card-content {
+    padding: 16px;
+  }
   .games-card-title {
     font-size: 20px;
   }
@@ -101,3 +96,4 @@
     font-size: 16px;
   }
 }
+
