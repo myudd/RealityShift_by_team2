@@ -1,158 +1,140 @@
-/* =========================================
-   MOBILE (до 767px)
-   ========================================= */
-/*======ФУТЕР+ПІДСВІТКА===========*/
-
-   .footer{
-font-family: var(--font-family);
-background-color: #1f0243;
-background-image: url("../img/footer-ellipse-mobile.svg");
-background-repeat: no-repeat;
-background-position: center center;
+.footer {
+  font-family: var(--font-family);
+  background-color: #1f0243;
+  background-image: url("../img/footer-ellipse-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 
-.footer-container{
-max-width: 375px;
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 48px 20px;
-gap: 80px;
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
-.footer-top{
-display: flex;
-align-items: center;
-flex-direction: column;
-gap: 24px;
-   }
-
-.footer-info{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 24px;
+.footer-top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 88px;
 }
 
-   /*==========ЛОГОТИП=========*/
-.footer-logo{
-display: block;
-   }
-.footer-logo-img{
-display: block;
-   }
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
 
-   /*==========КОНТАКТИ==========*/
-.footer-contacts-group{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 4px;
-   }
+.footer-logo,
+.footer-logo-img {
+  display: block;
+}
 
-.footer-contacts{
-display: flex;
-align-items: center;
-justify-content: flex-start;
-flex-direction: column;
-gap: 24px;
-font-style: normal;
-   }
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  font-style: normal;
+}
 
-.footer-contacts-title{
-font-weight: 600;
-font-size: 12px;
-line-height: 1.5;
-text-align: center;
-color: #fff;
-   }
+.footer-contacts-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.footer-contacts-link{
-font-weight: 400;
-font-size: 12px;
-line-height: 1.5;
-text-align: center;
-text-decoration: underline;
-text-decoration-skip-ink: none;
-color: #fff;
-   }
-/*=============СОЦІАЛЬНІ===========*/
-.icon-list{
-display: flex;
-justify-content: center;
-gap: 12px;
-list-style: none;
-margin: 0;
-padding: 0;
+.footer-contacts-title {
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.footer-contacts-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.icon-list {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-icon-link {
-width: 40px;
-height: 40px;
-display: flex;
-align-items: center;
-justify-content: center;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-icon {
-display: block;
-width: 33px;
-height: 33px;
-fill: #fff;
+  display: block;
+  width: 33px;
+  height: 33px;
+  fill: currentColor;
 }
 
-
-/*=============ПОСИЛАННЯ============*/
-.footer-nav{
-width: 100%;
-margin-top: 64px;
+.footer-icon-instagram {
+  transform: scale(1.33);
 }
 
-.footer-nav-list{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 32px;
-list-style: none;
-margin:0;
-padding: 0;
-text-align: center;
+.footer-nav {
+  width: 100%;
 }
 
-.footer-nav-link{
-display: block;
-font-size: 16px;
-line-height: 1.5;
-color: #fff;
-text-decoration: none;
-}
-   
-/*========ТЕКСТ ВНИЗУ=========*/
-.footer-bottom{
-width: 100%;
-padding-top: 32px;
-border-top: 1px solid rgba(255, 255, 255, 0.2);
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-gap: 32px;
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-.footer-copy{
-font-weight: 400;
-font-size: 12px;
-line-height: 1.5;
-color: #fff;
+.footer-nav-link {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
 }
 
-/*==========ЕФЕКТИ (UI Kit)===========*/
+.footer-bottom {
+  width: 100%;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.footer-copy {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 .footer-contacts-link,
 .footer-nav-link,
 .footer-icon-link {
-cursor: pointer;
-transition: opacity 250ms ease;
+  cursor: pointer;
+  transition: opacity 250ms linear;
 }
 
 .footer-contacts-link:hover,
@@ -161,113 +143,92 @@ transition: opacity 250ms ease;
 .footer-nav-link:focus,
 .footer-icon-link:hover,
 .footer-icon-link:focus {
-opacity: 0.5;
+  opacity: 0.5;
 }
 
 .footer-contacts-link:active,
 .footer-nav-link:active,
 .footer-icon-link:active {
-opacity: 0.8;
+  opacity: 0.8;
 }
 
+@media screen and (min-width: 768px) {
+  .footer {
+    background-image: url("../img/footer-ellipse-tablet.svg");
+    background-position: center bottom;
+  }
 
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
-/* =========================================
-   TABLET (від 768px)
-   ========================================= */
+  .footer-info {
+    align-items: flex-start;
+    gap: 32px;
+  }
 
+  .footer-contacts,
+  .footer-contacts-group {
+    align-items: flex-start;
+  }
 
- @media screen and (min-width: 768px) {
+  .footer-contacts-title,
+  .footer-contacts-link {
+    text-align: left;
+  }
 
-.footer-container{
-max-width: 768px;
-padding: 48px 32px;
+  .icon-list {
+    justify-content: flex-start;
+  }
+
+  .footer-nav {
+    width: auto;
+  }
+
+  .footer-nav-list {
+    align-items: flex-start;
+    gap: 24px;
+    text-align: left;
+  }
+
+  .footer-icon-link {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-.footer-top{
-width: 100%;
-flex-direction: row;
-justify-content: space-between;
-align-items: flex-start;  
-}
-
-/*============ЛІВА КОЛОНКА============*/
-.footer-info{
-align-items: flex-start;
-gap: 32px;
-}
-.footer-contacts,
-.footer-contacts-group{
-align-items: flex-start;
-}
-.footer-contacts-title,
-.footer-contacts-link{
-text-align: left;
-}
-.icon-list{
-justify-content: flex-start;
-}
-
-.footer-nav-list{
-align-items: flex-start;
-text-align: left;
-gap: 24px;
-}
-
-
-.footer-nav{
-width: auto;
-margin-top: 0;
-}
-
-.footer-bottom{
-width: 100%;
-}
-.footer-icon-link {
-width: 24px;
-height: 24px;
-}
-
-.footer-icon {
- width: 20px;
-height: 20px;
-}
-
-/*==============ПІДСВІТКА===========*/
-.footer{
-background-image: url("../img/footer-ellipse-tablet.svg");
-background-position: center bottom;
-}
-   }
-
-/*====================================
-DESKTOP(від 1440px)
-======================================*/
 @media screen and (min-width: 1440px) {
-.footer{
-background-image: url("../img/footer-ellipse-desktop.svg");
-background-position: center bottom;
-}
-.footer-container{
-padding: 80px 64px;
-max-width: 1440px;
-margin: 0 auto;
-}
-.footer-top{
-gap: 64px;
-}
-.footer-nav-list{
-gap: 16px;
-}
-.footer-nav-link{
-font-size: 18px;
-}
-.footer-copy{
-font-size: 16px;
-}
-.footer-contacts-title,
-.footer-contacts-link {
-font-size: 16px;
-}
+  .footer {
+    background-image: url("../img/footer-ellipse-desktop.svg");
+  }
 
+  .footer-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .footer-top {
+    gap: 64px;
+  }
+
+  .footer-contacts-title,
+  .footer-contacts-link,
+  .footer-copy {
+    font-size: 16px;
+  }
+
+  .footer-nav-list {
+    gap: 16px;
+  }
+
+  .footer-nav-link {
+    font-size: 18px;
+  }
 }
