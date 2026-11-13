@@ -91,7 +91,7 @@
     }
     .review-item-card:hover{
         transform: scale(102%);
-        background-image: url(./img/feedbacks/ellipse-bg.svg);
+        background-image: url('../img/feedbacks/ellipse-bg.svg');
         background-position: var(--bg-x, 50%) var(--bg-y, 50%);;
         background-size: cover;
         background-repeat: no-repeat;
