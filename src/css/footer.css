@@ -1,140 +1,140 @@
 .footer {
-  font-family: var(--font-family);
-  background-color: #1f0243;
-  background-image: url("../img/footer-ellipse-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+font-family: var(--font-family);
+background-color: #1f0243;
+background-image: url("../img/footer-ellipse-mobile.svg");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: contain;
 }
 
 .footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 80px;
-  padding-top: 48px;
-  padding-bottom: 48px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 80px;
+padding-top: 48px;
+padding-bottom: 48px;
 }
 
 .footer-top {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 88px;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 88px;
 }
 
 .footer-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 24px;
 }
 
 .footer-logo,
 .footer-logo-img {
-  display: block;
+display: block;
 }
 
 .footer-contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  font-style: normal;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 24px;
+font-style: normal;
 }
 
 .footer-contacts-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .footer-contacts-title {
-  margin-bottom: 4px;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.5;
-  text-align: center;
+margin-bottom: 4px;
+font-weight: 600;
+font-size: 12px;
+line-height: 1.5;
+text-align: center;
 }
 
 .footer-contacts-link {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.5;
-  text-align: center;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.5;
+text-align: center;
+text-decoration: underline;
+text-decoration-skip-ink: none;
 }
 
 .icon-list {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+display: flex;
+justify-content: center;
+gap: 12px;
+list-style: none;
+margin: 0;
+padding: 0;
 }
 
 .footer-icon-link {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .footer-icon {
-  display: block;
-  width: 33px;
-  height: 33px;
-  fill: currentColor;
+display: block;
+width: 33px;
+height: 33px;
+fill: currentColor;
 }
 
 .footer-icon-instagram {
-  transform: scale(1.33);
+transform: scale(1.33);
 }
 
 .footer-nav {
-  width: 100%;
+width: 100%;
 }
 
 .footer-nav-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 32px;
+list-style: none;
+margin: 0;
+padding: 0;
+text-align: center;
 }
 
 .footer-nav-link {
-  display: block;
-  font-size: 16px;
-  line-height: 1.5;
-  text-decoration: none;
+display: block;
+font-size: 16px;
+line-height: 1.5;
+text-decoration: none;
 }
 
 .footer-bottom {
-  width: 100%;
-  padding-top: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  text-align: center;
+width: 100%;
+padding-top: 32px;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+text-align: center;
 }
 
 .footer-copy {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.5;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.5;
 }
 
 .footer-contacts-link,
 .footer-nav-link,
 .footer-icon-link {
-  cursor: pointer;
-  transition: opacity 250ms linear;
+cursor: pointer;
+transition: opacity 250ms linear;
 }
 
 .footer-contacts-link:hover,
@@ -143,92 +143,92 @@
 .footer-nav-link:focus,
 .footer-icon-link:hover,
 .footer-icon-link:focus {
-  opacity: 0.5;
+opacity: 0.5;
 }
 
 .footer-contacts-link:active,
 .footer-nav-link:active,
 .footer-icon-link:active {
-  opacity: 0.8;
+opacity: 0.8;
 }
 
 @media screen and (min-width: 768px) {
-  .footer {
-    background-image: url("../img/footer-ellipse-tablet.svg");
-    background-position: center bottom;
-  }
+.footer {
+background-image: url("../img/footer-ellipse-tablet.svg");
+background-position: center bottom;
+}
 
-  .footer-top {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+.footer-top {
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+}
 
-  .footer-info {
-    align-items: flex-start;
-    gap: 32px;
-  }
+.footer-info {
+align-items: flex-start;
+gap: 32px;
+}
 
-  .footer-contacts,
-  .footer-contacts-group {
-    align-items: flex-start;
-  }
+.footer-contacts,
+.footer-contacts-group {
+align-items: flex-start;
+}
 
-  .footer-contacts-title,
-  .footer-contacts-link {
-    text-align: left;
-  }
+.footer-contacts-title,
+.footer-contacts-link {
+text-align: left;
+}
 
-  .icon-list {
-    justify-content: flex-start;
-  }
+.icon-list {
+justify-content: flex-start;
+}
 
-  .footer-nav {
-    width: auto;
-  }
+.footer-nav {
+width: auto;
+}
 
-  .footer-nav-list {
-    align-items: flex-start;
-    gap: 24px;
-    text-align: left;
-  }
+.footer-nav-list {
+align-items: flex-start;
+gap: 24px;
+text-align: left;
+}
 
-  .footer-icon-link {
-    width: 24px;
-    height: 24px;
-  }
+.footer-icon-link {
+width: 24px;
+height: 24px;
+}
 
-  .footer-icon {
-    width: 20px;
-    height: 20px;
-  }
+.footer-icon {
+width: 20px;
+height: 20px;
+}
 }
 
 @media screen and (min-width: 1440px) {
-  .footer {
-    background-image: url("../img/footer-ellipse-desktop.svg");
-  }
+.footer {
+background-image: url("../img/footer-ellipse-desktop.svg");
+}
 
-  .footer-container {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+.footer-container {
+padding-top: 80px;
+padding-bottom: 80px;
+}
 
-  .footer-top {
-    gap: 64px;
-  }
+.footer-top {
+gap: 64px;
+}
 
-  .footer-contacts-title,
-  .footer-contacts-link,
-  .footer-copy {
-    font-size: 16px;
-  }
+.footer-contacts-title,
+.footer-contacts-link,
+.footer-copy {
+font-size: 16px;
+}
 
-  .footer-nav-list {
-    gap: 16px;
-  }
+.footer-nav-list {
+gap: 16px;
+}
 
-  .footer-nav-link {
-    font-size: 18px;
-  }
+.footer-nav-link {
+font-size: 18px;
+}
 }
