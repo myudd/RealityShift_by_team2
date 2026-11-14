@@ -94,6 +94,9 @@
 }
 
 @media (max-width: 767px) {
+    .container {
+        padding: 18px 0;
+    }
     .header-btn, 
     .header-nav {
         display: none;
