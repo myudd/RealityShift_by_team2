@@ -1,7 +1,7 @@
 .footer {
 font-family: var(--font-family);
 background-color: #1f0243;
-background-image: url("../img/footer-ellipse-mobile.svg");
+background-image: url("../img/footer/footer-ellipse-mobile.svg");
 background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;
@@ -154,7 +154,7 @@ opacity: 0.8;
 
 @media screen and (min-width: 768px) {
 .footer {
-background-image: url("../img/footer-ellipse-tablet.svg");
+background-image: url("../img/footer/footer-ellipse-tablet.svg");
 background-position: center bottom;
 }
 
@@ -206,7 +206,7 @@ height: 20px;
 
 @media screen and (min-width: 1440px) {
 .footer {
-background-image: url("../img/footer-ellipse-desktop.svg");
+background-image: url("../img/footer/footer-ellipse-desktop.svg");
 }
 
 .footer-container {
